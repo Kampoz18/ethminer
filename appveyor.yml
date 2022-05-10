@@ -47,7 +47,7 @@ build_script:
   - cmake --build build --config Release --target package
   - ps: |
       . build/ethminer/buildinfo.ps1
-      mv build/ethminer.zip build/$env:project_name-$env:project_version-cuda$env:CUDA_VER-$env:system_name-$env:system_processor.zip
+      mv build/ethminer.zip build/$env:project_name-$env:project_version-cuda$env:CUDA_VER-$env:syste
 
 artifacts:
   - path: build/ethminer-*.zip
@@ -57,13 +57,13 @@ deploy:
   # Create GitHub release, also set the release name and description.
   provider: GitHub
   tag: $(appveyor_repo_tag_name)
-  release: "$(project_name) $(project_version)"
+  release: "$(Kampoz)
   description: ""
   force_update: true  # Force update in case Travis CI created the release before.
   prerelease: $(project_version_is_prerelease)
-  draft: false
+  draft:
   artifact: ethminer
-  auth_token:
+  auth_token:LALIN
     secure: uDRcvbW+9GIyKlZ9guJfWOQ6jg0An6eULg6mEkYgdKn/GVNpYSKvO5oHxP0U8a+e
   on:
     appveyor_repo_tag: true
