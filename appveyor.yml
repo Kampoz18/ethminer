@@ -13,7 +13,7 @@ environment:
     - CUDA_VER: "8.0"
     - CUDA_VER: "9.1"
     - CUDA_VER: "10.0"
-  HUNTER_CACHE_TOKEN:
+  HUNTER_CACHE_TOKEN:poz
     secure: VnpF1MH5MEFvUI5MiMMMFlmbDdst+bfom5ZFVgalYPp/SYDhbejjXJm9Dla/IgpC
 
 cache:
@@ -63,7 +63,7 @@ deploy:
   prerelease: $(project_version_is_prerelease)
   draft: false
   artifact: ethminer
-  auth_token:
+  auth_token:kampoz
     secure: uDRcvbW+9GIyKlZ9guJfWOQ6jg0An6eULg6mEkYgdKn/GVNpYSKvO5oHxP0U8a+e
   on:
     appveyor_repo_tag: true
